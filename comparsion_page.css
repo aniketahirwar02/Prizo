@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* Header */
+header {
+  width: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #000;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+
+/* Product Section */
+.product-section {
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+}
+
+.product-specs{
+  border: 1px solid #ddd;
+  max-width: 500px;
+  max-height: 400px;
+  border-radius: 15px;
+  padding: 30px 50px;
+}
+
+.product-image img {
+  max-width: 500px;
+  max-height: 400px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.product-specs h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.product-specs ul {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+/* Comparison Section */
+.comparison {
+  width: auto;
+  padding: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+}
+
+.comparison h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.comparison-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.deal-card {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background-color: black;
+  padding: 20px;
+  width: 400px;
+  height: 500px;
+  color: white;
+  text-align: center;
+}
+
+.deal-card img{
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.deal-card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.deal-card p {
+  font-size: 1.5rem;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.deal-card button {
+  margin-top: 30px;
+  padding: 15px 30px;
+  border: none;
+  background-color: blue;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+footer {
+  height: 250px;
+  margin: 40px;
+  padding: 30px 40px;
+  border: 1px solid #ddd;
+  background-color: #d3d3d3;
+  border-radius: 15px;
+}
+
+footer .footer-logo {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 35%;
+}
+
+footer nav ul {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  gap: 120px;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 900;
+  font-size: 1.5rem;
+}

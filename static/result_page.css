@@ -1,0 +1,38 @@
+/* Main Content */
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.product-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+

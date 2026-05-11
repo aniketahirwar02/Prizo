@@ -1,0 +1,151 @@
+const products = [
+  {
+    id: 1,
+    name: "iPhone 15",
+    image: "https://dummyimage.com/300x300/000/fff&text=iPhone+15",
+    category: "Smartphone",
+    prices: [
+      {
+        site: "Amazon",
+        price: 70999,
+        delivery: "Free Delivery",
+        rating: 4.5,
+        link: "#"
+      },
+      {
+        site: "Flipkart",
+        price: 68999,
+        delivery: "₹40 Delivery",
+        rating: 4.4,
+        link: "#"
+      },
+      {
+        site: "Croma",
+        price: 69999,
+        delivery: "Free Delivery",
+        rating: 4.3,
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 2,
+    name: "Samsung Galaxy S24",
+    image: "https://dummyimage.com/300x300/000/fff&text=Galaxy+S24",
+    category: "Smartphone",
+    prices: [
+      {
+        site: "Amazon",
+        price: 74999,
+        delivery: "Free Delivery",
+        rating: 4.6,
+        link: "#"
+      },
+      {
+        site: "Flipkart",
+        price: 73999,
+        delivery: "Free Delivery",
+        rating: 4.5,
+        link: "#"
+      },
+      {
+        site: "Reliance Digital",
+        price: 75999,
+        delivery: "₹99 Delivery",
+        rating: 4.4,
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 3,
+    name: "MacBook Air M2",
+    image: "https://dummyimage.com/300x300/000/fff&text=MacBook+M2",
+    category: "Laptop",
+    prices: [
+      {
+        site: "Amazon",
+        price: 99999,
+        delivery: "Free Delivery",
+        rating: 4.8,
+        link: "#"
+      },
+      {
+        site: "Flipkart",
+        price: 97999,
+        delivery: "Free Delivery",
+        rating: 4.7,
+        link: "#"
+      },
+      {
+        site: "Vijay Sales",
+        price: 98999,
+        delivery: "Free Delivery",
+        rating: 4.5,
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 4,
+    name: "Sony WH-1000XM5",
+    image: "https://dummyimage.com/300x300/000/fff&text=Sony+XM5",
+    category: "Headphones",
+    prices: [
+      {
+        site: "Amazon",
+        price: 24999,
+        delivery: "Free Delivery",
+        rating: 4.7,
+        link: "#"
+      },
+      {
+        site: "Flipkart",
+        price: 23999,
+        delivery: "₹49 Delivery",
+        rating: 4.6,
+        link: "#"
+      },
+      {
+        site: "Croma",
+        price: 24499,
+        delivery: "Free Delivery",
+        rating: 4.5,
+        link: "#"
+      }
+    ]
+  },
+
+  {
+    id: 5,
+    name: "Dell Inspiron Ryzen 5",
+    image: "https://dummyimage.com/300x300/000/fff&text=Dell+Ryzen+5",
+    category: "Laptop",
+    prices: [
+      {
+        site: "Amazon",
+        price: 54999,
+        delivery: "Free Delivery",
+        rating: 4.3,
+        link: "#"
+      },
+      {
+        site: "Flipkart",
+        price: 53999,
+        delivery: "Free Delivery",
+        rating: 4.2,
+        link: "#"
+      },
+      {
+        site: "Reliance Digital",
+        price: 55999,
+        delivery: "₹99 Delivery",
+        rating: 4.1,
+        link: "#"
+      }
+    ]
+  }
+];

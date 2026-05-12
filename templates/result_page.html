@@ -22,27 +22,27 @@
     <h1>Result for iPhone</h1>
     <div class="results-grid">
       <div class="product-card">
-        <img src="../images/Iphone.jpg" alt="Apple iPhone 17 Pro Max">
+        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
         <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
       </div>
       <div class="product-card">
-        <img src="../images/Iphone.jpg" alt="Apple iPhone 17 Pro Max">
+       <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
         <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
       </div>
       <div class="product-card">
-        <img src="../images/Iphone.jpg" alt="Apple iPhone 17 Pro Max">
+        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
         <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
       </div>
       <div class="product-card">
-        <img src="../images/Iphone.jpg" alt="Apple iPhone 17 Pro Max">
+        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
         <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
       </div>
       <div class="product-card">
-        <img src="../images/Iphone.jpg" alt="Apple iPhone 17 Pro Max">
+        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
         <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
       </div>
       <div class="product-card">
-        <img src="../images/Iphone.jpg" alt="Apple iPhone 17 Pro Max">
+        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
         <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
       </div>
     </div>
@@ -53,9 +53,10 @@
     <div class="footer-logo">PRIZO</div>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about_page.html">About</a></li>
-        <li><a href="contact_page.html">Contact</a></li>
+         <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{ url_for('about_page') }}">About</a></li>
+        <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+
       </ul>
     </nav>
   </footer>

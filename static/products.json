@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "iPhone 15",
     image: "https://dummyimage.com/300x300/000/fff&text=iPhone+15",
-    category: "Smartphone",
+    category: "Mobile",
     prices: [
       {
         site: "Amazon",
@@ -33,7 +33,7 @@ const products = [
     id: 2,
     name: "Samsung Galaxy S24",
     image: "https://dummyimage.com/300x300/000/fff&text=Galaxy+S24",
-    category: "Smartphone",
+    category: "Mobile",
     prices: [
       {
         site: "Amazon",

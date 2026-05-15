@@ -1,5 +1,7 @@
 from flask import Flask, render_template, request
 from products import products
+import sqlite3
+from flask import request
 
 app = Flask(__name__)
 
@@ -16,6 +18,32 @@ def about_page():
 @app.route('/contact_page')
 def contact_page():
     return render_template('contact_page.html')
+
+
+@app.route('/submit_contact', methods=['POST'])
+def submit_contact():
+
+    name = request.form['name']
+    email = request.form['email']
+    message = request.form['message']
+
+    connection = sqlite3.connect('prizo.db')
+
+    cursor = connection.cursor()
+
+    cursor.execute('''
+    INSERT INTO contacts (name, email, message)
+    VALUES (?, ?, ?)
+    ''', (name, email, message))
+
+    connection.commit()
+
+    connection.close()
+
+    return render_template(
+        'contact_page.html',
+        success=True
+    )
 
 
 @app.route('/search')

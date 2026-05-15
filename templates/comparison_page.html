@@ -69,6 +69,8 @@
 
       <div class="deal-card">
 
+        <img src="{{ url_for('static', filename='images/' + item.logo) }}">
+
         <h3>{{ item.store }}</h3>
 
         <p>Price: ₹{{ item.price }}</p>

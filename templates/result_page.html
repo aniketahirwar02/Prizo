@@ -8,60 +8,69 @@
   <link rel="stylesheet" href="../static/nav_footer.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">PRIZO</div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search">
-      <button>Search</button>
-    </div>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <h1>Result for iPhone</h1>
-    <div class="results-grid">
-      <div class="product-card">
-        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
-        <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
-      </div>
-      <div class="product-card">
-       <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
-        <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
-      </div>
-      <div class="product-card">
-        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
-        <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
-      </div>
-      <div class="product-card">
-        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
-        <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
-      </div>
-      <div class="product-card">
-        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
-        <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
-      </div>
-      <div class="product-card">
-        <img src="{{ url_for('static', filename='images/Iphone.jpg') }}" alt="Apple iPhone 17 Pro Max">
-        <p>Apple iPhone 17 Pro Max Phone Price in India 2026</p>
-      </div>
-    </div>
-  </main>
+<header>
+  <div class="logo">PRIZO</div>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-logo">PRIZO</div>
-    <nav>
-      <ul>
-         <li><a href="{{url_for('home')}}">Home</a></li>
-        <li><a href="{{ url_for('about_page') }}">About</a></li>
-        <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+  <form action="/search" method="GET" class="search-bar">
 
-      </ul>
-    </nav>
-  </footer>
+    <input type="text" name="q" placeholder="Search">
+
+    <button type="submit">Search</button>
+
+  </form>
+</header>
 
 
-  <script src="{{ url_for('static', filename='js/result.js') }}"></script>
+<main>
+
+  <h1>Results for "{{ query }}"</h1>
+
+  {% if products|length == 0 %}
+
+    <p>No products found.</p>
+
+  {% endif %}
+
+  <div class="results-grid">
+
+    {% for product in products %}
+
+    <a href="/comparison_page/{{ product.id }}">
+
+      <div class="product-card">
+
+        <img
+          src="{{ url_for('static', filename='images/' + product.image) }}"
+        >
+
+        <p>{{ product.name }}</p>
+
+        <h2>₹{{ product.price }}</h2>
+
+        <h3>{{ product.store }}</h3>
+
+      </div>
+
+    </a>
+
+    {% endfor %}
+
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-logo">PRIZO</div>
+
+  <nav>
+    <ul>
+      <li><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{ url_for('about_page') }}">About</a></li>
+      <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+    </ul>
+  </nav>
+</footer>
+
 </body>
 </html>

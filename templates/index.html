@@ -19,10 +19,18 @@
 
   <main>
     <h1>FIND THE BEST PRICE INSTANTLY</h1>
-    <div class="search-bar">
-      <input type="text" id="search-box" placeholder="Search...">
-      <button type="submit" onclick="searchProduct()">Search</button>
-    </div>
+    <form action="/search" method="GET" class="search-bar">
+
+  <input
+    type="text"
+    name="q"
+    placeholder="Search products..."
+    required
+  >
+
+  <button type="submit">Search</button>
+
+    </form>
   </main>
 
 

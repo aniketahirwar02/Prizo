@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIZO - Comparison Page</title>
+  <link rel="stylesheet" href="../static/comparison_page.css">
+  <link rel="stylesheet" href="../static/nav_footer.css">
+</head>
+<body>
+
+<header>
+
+  <div class="logo">PRIZO</div>
+
+  <form action="/search" method="GET" class="search-bar">
+
+    <input type="text" name="q" placeholder="Search">
+
+    <button type="submit">Search</button>
+
+  </form>
+
+</header>
+
+
+<main>
+
+  <div class="product-section">
+
+    <div class="product-image">
+
+      <img
+        src="{{ url_for('static', filename='images/' + product.image) }}"
+      >
+
+    </div>
+
+
+    <div class="product-specs">
+
+      <h1>{{ product.name }}</h1>
+
+      <ul>
+
+        <li>High quality product</li>
+        <li>Best performance</li>
+        <li>Latest version available</li>
+        <li>Fast delivery</li>
+        <li>Trusted online stores</li>
+
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <section class="comparison">
+
+    <h2>
+      Best Deal: {{ best_price.store }}
+      (₹{{ best_price.price }})
+    </h2>
+
+    <div class="comparison-grid">
+
+      {% for item in comparison_products %}
+
+      <div class="deal-card">
+
+        <h3>{{ item.store }}</h3>
+
+        <p>Price: ₹{{ item.price }}</p>
+
+        <p>Rating: 4.5</p>
+
+        <button>Visit Site</button>
+
+      </div>
+
+      {% endfor %}
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <div class="footer-logo">PRIZO</div>
+
+  <nav>
+
+    <ul>
+
+      <li><a href="{{url_for('home')}}">Home</a></li>
+      <li><a href="{{ url_for('about_page') }}">About</a></li>
+      <li><a href="{{url_for('contact_page')}}">CONTACT</a></li>
+
+    </ul>
+
+  </nav>
+
+</footer>
+
+</body>
+</html>
